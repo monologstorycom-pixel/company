@@ -26,7 +26,7 @@ COPY --from=vendor /app/vendor ./vendor
 RUN npm run build
 
 # ---------- Stage 3: Runtime image ----------
-FROM php:8.2-fpm-alpine AS runtime
+FROM php:8.3-fpm-alpine AS runtime
 
 # System deps + PHP extensions required by Laravel + this project
 RUN apk add --no-cache \
